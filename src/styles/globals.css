@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#messageDashboard {
+  --sb-track-color: #343541;
+  --sb-thumb-color: #444654;
+  --sb-size: 14px;
+}
+
+#messageDashboard::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+#messageDashboard::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+#messageDashboard::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  #messageDashboard {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
